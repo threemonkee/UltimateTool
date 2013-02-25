@@ -13,7 +13,8 @@ typedef enum
     FONT_BROWSER,
     DEVICE_INFO,
     GESTURE_RECOGNIZER,
-    COLOR_GENERATOR
+    COLOR_GENERATOR,
+    ATTRIBUTED_STRING
 }main_menu;
 
 @interface MainMenu ()
@@ -60,7 +61,7 @@ typedef enum
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 4;
+    return 5;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -87,6 +88,9 @@ typedef enum
             break;
         case COLOR_GENERATOR:
             stringMenu = @"Color Generator";
+            break;
+        case ATTRIBUTED_STRING:
+            stringMenu = @"Attributed String";
             break;
     }
     [cell.textLabel setText:stringMenu];
@@ -168,6 +172,12 @@ typedef enum
         ColorGenerator *colorGenerator = [[ColorGenerator alloc] initWithNibName:@"ColorGenerator" bundle:nil];
         [colorGenerator setTitle:@"Color Generator"];
         [self.navigationController pushViewController:colorGenerator animated:TRUE];
+        
+    }else if (indexPath.row == ATTRIBUTED_STRING)
+    {
+        AttributedString *attributedString = [[AttributedString alloc] initWithNibName:@"AttributedString" bundle:nil];
+        [attributedString setTitle:@"Attributed String"];
+        [self.navigationController pushViewController:attributedString animated:TRUE];
         
     }
 }

@@ -32,6 +32,8 @@
 		AC4F90DC16AE1B3D0099193A /* GestureRecognizer.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC4F90DA16AE1B3D0099193A /* GestureRecognizer.xib */; };
 		AC4F90E116AE21750099193A /* ColorGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = AC4F90DF16AE21750099193A /* ColorGenerator.m */; };
 		AC4F90E216AE21750099193A /* ColorGenerator.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC4F90E016AE21750099193A /* ColorGenerator.xib */; };
+		AC5DD11916DB835E0030B9A8 /* AttributedString.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5DD11716DB835E0030B9A8 /* AttributedString.m */; };
+		AC5DD11A16DB835E0030B9A8 /* AttributedString.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC5DD11816DB835E0030B9A8 /* AttributedString.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +76,9 @@
 		AC4F90DE16AE21750099193A /* ColorGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorGenerator.h; sourceTree = "<group>"; };
 		AC4F90DF16AE21750099193A /* ColorGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorGenerator.m; sourceTree = "<group>"; };
 		AC4F90E016AE21750099193A /* ColorGenerator.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorGenerator.xib; sourceTree = "<group>"; };
+		AC5DD11616DB835E0030B9A8 /* AttributedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttributedString.h; sourceTree = "<group>"; };
+		AC5DD11716DB835E0030B9A8 /* AttributedString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttributedString.m; sourceTree = "<group>"; };
+		AC5DD11816DB835E0030B9A8 /* AttributedString.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AttributedString.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +154,9 @@
 				AC4F90E016AE21750099193A /* ColorGenerator.xib */,
 				AC491CF416C26674006BF731 /* UIColor+Components.h */,
 				AC491CF516C26674006BF731 /* UIColor+Components.m */,
+				AC5DD11616DB835E0030B9A8 /* AttributedString.h */,
+				AC5DD11716DB835E0030B9A8 /* AttributedString.m */,
+				AC5DD11816DB835E0030B9A8 /* AttributedString.xib */,
 			);
 			path = UltimateTool;
 			sourceTree = "<group>";
@@ -231,6 +239,7 @@
 				AC4F90E216AE21750099193A /* ColorGenerator.xib in Resources */,
 				AC491CF816C2694F006BF731 /* Icon57.png in Resources */,
 				AC491CFA16C26956006BF731 /* Icon114.png in Resources */,
+				AC5DD11A16DB835E0030B9A8 /* AttributedString.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +259,7 @@
 				AC4F90DB16AE1B3D0099193A /* GestureRecognizer.m in Sources */,
 				AC4F90E116AE21750099193A /* ColorGenerator.m in Sources */,
 				AC491CF616C26674006BF731 /* UIColor+Components.m in Sources */,
+				AC5DD11916DB835E0030B9A8 /* AttributedString.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

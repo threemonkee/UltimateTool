@@ -12,6 +12,7 @@
 #import "DeviceInfo.h"
 #import "GestureRecognizer.h"
 #import "ColorGenerator.h"
+#import "AttributedString.h"
 
 @interface MainMenu : UITableViewController
 

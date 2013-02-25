@@ -264,7 +264,7 @@
 							<object class="IBUISlider" id="522699344">
 								<reference key="NSNextResponder" ref="859626346"/>
 								<int key="NSvFlags">268</int>
-								<string key="NSFrame">{{18, 374}, {220, 23}}</string>
+								<string key="NSFrame">{{18, 374}, {197, 23}}</string>
 								<reference key="NSSuperview" ref="859626346"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="636098840"/>
@@ -278,7 +278,7 @@
 							<object class="IBUILabel" id="249352249">
 								<reference key="NSNextResponder" ref="859626346"/>
 								<int key="NSvFlags">268</int>
-								<string key="NSFrame">{{244, 343}, {56, 22}}</string>
+								<string key="NSFrame">{{204, 343}, {96, 22}}</string>
 								<reference key="NSSuperview" ref="859626346"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="522699344"/>
@@ -300,7 +300,7 @@
 							<object class="IBUISlider" id="915096961">
 								<reference key="NSNextResponder" ref="859626346"/>
 								<int key="NSvFlags">268</int>
-								<string key="NSFrame">{{18, 344}, {220, 23}}</string>
+								<string key="NSFrame">{{18, 344}, {197, 23}}</string>
 								<reference key="NSSuperview" ref="859626346"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="249352249"/>
@@ -314,7 +314,7 @@
 							<object class="IBUILabel" id="829091027">
 								<reference key="NSNextResponder" ref="859626346"/>
 								<int key="NSvFlags">268</int>
-								<string key="NSFrame">{{244, 312}, {56, 22}}</string>
+								<string key="NSFrame">{{211, 312}, {89, 22}}</string>
 								<reference key="NSSuperview" ref="859626346"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="915096961"/>
@@ -336,7 +336,7 @@
 							<object class="IBUISlider" id="163262468">
 								<reference key="NSNextResponder" ref="859626346"/>
 								<int key="NSvFlags">268</int>
-								<string key="NSFrame">{{18, 313}, {220, 23}}</string>
+								<string key="NSFrame">{{18, 313}, {197, 23}}</string>
 								<reference key="NSSuperview" ref="859626346"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="829091027"/>
@@ -372,7 +372,7 @@
 							<object class="IBUISlider" id="617825570">
 								<reference key="NSNextResponder" ref="859626346"/>
 								<int key="NSvFlags">268</int>
-								<string key="NSFrame">{{18, 282}, {220, 23}}</string>
+								<string key="NSFrame">{{18, 282}, {197, 23}}</string>
 								<reference key="NSSuperview" ref="859626346"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="984397675"/>
@@ -1037,17 +1037,12 @@
 					<string key="superclassName">UIViewController</string>
 					<dictionary class="NSMutableDictionary" key="actions">
 						<string key="segmentChanged:">id</string>
-						<string key="sliderBlue:">id</string>
 						<string key="sliderWhite:">id</string>
 						<string key="sliderWhiteAlpha:">id</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
 						<object class="IBActionInfo" key="segmentChanged:">
 							<string key="name">segmentChanged:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="sliderBlue:">
-							<string key="name">sliderBlue:</string>
 							<string key="candidateClassName">id</string>
 						</object>
 						<object class="IBActionInfo" key="sliderWhite:">
