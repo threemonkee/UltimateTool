@@ -13,6 +13,8 @@
 #import "GestureRecognizer.h"
 #import "ColorGenerator.h"
 #import "AttributedString.h"
+#import "ClassBrowser.h"
+#import "ProtocolBrowser.h"
 
 @interface MainMenu : UITableViewController
 

@@ -1,36 +1,34 @@
 //
-//  MainMenu.m
+//  ClassDetail.m
 //  UltimateTool
 //
-//  Created by Victor Chandra on 11/16/12.
-//  Copyright (c) 2012 ThreeMonkee. All rights reserved.
+//  Created by Victor Chandra on 3/6/13.
+//  Copyright (c) 2013 ThreeMonkee. All rights reserved.
 //
 
-#import "MainMenu.h"
+#import "ClassDetail.h"
 
 typedef enum
 {
-    FONT_BROWSER,
-    DEVICE_INFO,
-    GESTURE_RECOGNIZER,
-    COLOR_GENERATOR,
-    //ATTRIBUTED_STRING,
-    CLASS_BROWSER,
-    PROTOCOL_BROWSER
-}main_menu;
+    PROPERTY,
+    PROTOCOL,
+    CLASS_METHOD,
+    INSTANCE_METHOD,
+}CLASS_DETAIL;
 
-@interface MainMenu ()
+@interface ClassDetail ()
 
 @end
 
-@implementation MainMenu
+@implementation ClassDetail
+
+#pragma mark -
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
-        self.title = @"Ultimate Tool";
     }
     return self;
 }
@@ -44,6 +42,12 @@ typedef enum
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+//    _arrayClassMethod = [NSMutableArray array];
+//    _arrayInstanceMethod = [NSMutableArray array];
+    
+    self.title = [_dictThisClass objectForKey:@"name"];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -57,13 +61,29 @@ typedef enum
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 1;
+    return 4;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 6;
+    switch (section) {
+        case PROPERTY:
+            return [[_dictThisClass objectForKey:@"property"] count];
+            break;
+        case PROTOCOL:
+            return [[_dictThisClass objectForKey:@"protocol"] count];
+            break;
+        case CLASS_METHOD:
+            return [[_dictThisClass objectForKey:@"class_method"] count];
+            break;
+        case INSTANCE_METHOD:
+            return [[_dictThisClass objectForKey:@"instance_method"] count];
+            break;
+        default:
+            return 0;
+            break;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -72,39 +92,54 @@ typedef enum
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-        [cell.textLabel setNumberOfLines:0];
+        [cell.textLabel setMinimumFontSize:MINIMUM_FONT_SIZE];
+        [cell.textLabel setAdjustsFontSizeToFitWidth:TRUE];
     }
     
     // Configure the cell...
-    NSString *stringMenu;
-    switch (indexPath.row)
-    {
-        case FONT_BROWSER:
-            stringMenu = @"Font Browser";
+    switch (indexPath.section) {
+        case PROPERTY:
+            [cell.textLabel setText:[[_dictThisClass objectForKey:@"property"] objectAtIndex:indexPath.row]];
             break;
-        case DEVICE_INFO:
-            stringMenu = @"Device Information";
+        case PROTOCOL:
+            [cell.textLabel setText:[[_dictThisClass objectForKey:@"protocol"] objectAtIndex:indexPath.row]];
             break;
-        case GESTURE_RECOGNIZER:
-            stringMenu = @"Gesture Recognizer";
+        case CLASS_METHOD:
+            [cell.textLabel setText:[[_dictThisClass objectForKey:@"class_method"] objectAtIndex:indexPath.row]];
             break;
-        case COLOR_GENERATOR:
-            stringMenu = @"Color Generator";
+        case INSTANCE_METHOD:
+            [cell.textLabel setText:[[_dictThisClass objectForKey:@"instance_method"] objectAtIndex:indexPath.row]];
             break;
-        /*case ATTRIBUTED_STRING:
-            stringMenu = @"Attributed String";
-            break;*/
-        case CLASS_BROWSER:
-            stringMenu = @"Class Browser";
+        default:
+            return 0;
             break;
-        case PROTOCOL_BROWSER:
-            stringMenu = @"Protocol Browser";
-        break;
     }
-    [cell.textLabel setText:stringMenu];
     
     return cell;
 }
+
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    switch (section) {
+        case PROPERTY:
+            return [NSString stringWithFormat:@"Property (%d)", [[_dictThisClass objectForKey:@"property"] count]];
+            break;
+        case PROTOCOL:
+            return [NSString stringWithFormat:@"Protocol (%d)", [[_dictThisClass objectForKey:@"protocol"] count]];
+            break;
+        case CLASS_METHOD:
+            return [NSString stringWithFormat:@"Class Methods (%d)", [[_dictThisClass objectForKey:@"class_method"] count]];
+            break;
+        case INSTANCE_METHOD:
+            return [NSString stringWithFormat:@"Instance Methods (%d)", [[_dictThisClass objectForKey:@"instance_method"] count]];
+            break;
+        default:
+            return 0;
+            break;
+    }
+
+}
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -156,49 +191,6 @@ typedef enum
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
-    
-    if (indexPath.row == FONT_BROWSER)
-    {
-        FontBrowser *fontBrowser = [[FontBrowser alloc] initWithStyle:UITableViewStylePlain];
-        [fontBrowser setTitle:@"Font Browser"];
-        [self.navigationController pushViewController:fontBrowser animated:TRUE];
-        
-    }else if (indexPath.row == DEVICE_INFO)
-    {
-        DeviceInfo *deviceInfo = [[DeviceInfo alloc] initWithStyle:UITableViewStyleGrouped];
-        [deviceInfo setTitle:@"Device Information"];
-        [self.navigationController pushViewController:deviceInfo animated:TRUE];
-        
-    }else if (indexPath.row == GESTURE_RECOGNIZER)
-    {
-        GestureRecognizer *gestureRecognizer = [[GestureRecognizer alloc] initWithNibName:@"GestureRecognizer" bundle:nil];
-        [gestureRecognizer setTitle:@"Gesture Recognizer"];
-        [self.navigationController pushViewController:gestureRecognizer animated:TRUE];
-        
-    }else if (indexPath.row == COLOR_GENERATOR)
-    {
-        ColorGenerator *colorGenerator = [[ColorGenerator alloc] initWithNibName:@"ColorGenerator" bundle:nil];
-        [colorGenerator setTitle:@"Color Generator"];
-        [self.navigationController pushViewController:colorGenerator animated:TRUE];
-        
-    }/*else if (indexPath.row == ATTRIBUTED_STRING)
-    {
-        AttributedString *attributedString = [[AttributedString alloc] initWithNibName:@"AttributedString" bundle:nil];
-        [attributedString setTitle:@"Attributed String"];
-        [self.navigationController pushViewController:attributedString animated:TRUE];
-        
-    }*/else if (indexPath.row == CLASS_BROWSER)
-    {
-        ClassBrowser *classBrowser = [[ClassBrowser alloc] initWithNibName:@"ClassBrowser" bundle:nil];
-        [classBrowser setTitle:@"Class Browser"];
-        [self.navigationController pushViewController:classBrowser animated:TRUE];
-        
-    }else if (indexPath.row == PROTOCOL_BROWSER)
-    {
-        ProtocolBrowser *protocolBrowser = [[ProtocolBrowser alloc] initWithNibName:@"ProtocolBrowser" bundle:nil];
-        [protocolBrowser setTitle:@"Protocol Browser"];
-        [self.navigationController pushViewController:protocolBrowser animated:TRUE];
-    }
 }
 
 @end
