@@ -92,7 +92,7 @@ typedef enum
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-        [cell.textLabel setMinimumFontSize:MINIMUM_FONT_SIZE];
+        [cell.textLabel setMinimumScaleFactor:MINIMUM_SCALE_FACTOR];
         [cell.textLabel setAdjustsFontSizeToFitWidth:TRUE];
     }
     

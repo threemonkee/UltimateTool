@@ -10,5 +10,6 @@
 #define UltimateTool_Constants_h
 
 #define MINIMUM_FONT_SIZE   6
+#define MINIMUM_SCALE_FACTOR  0.5
 
 #endif
