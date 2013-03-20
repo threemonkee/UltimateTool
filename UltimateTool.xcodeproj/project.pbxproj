@@ -81,7 +81,8 @@
 		AC4F90E216AE21750099193A /* ColorGenerator.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC4F90E016AE21750099193A /* ColorGenerator.xib */; };
 		AC5DD11916DB835E0030B9A8 /* AttributedString.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5DD11716DB835E0030B9A8 /* AttributedString.m */; };
 		AC5DD11A16DB835E0030B9A8 /* AttributedString.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC5DD11816DB835E0030B9A8 /* AttributedString.xib */; };
-		ACC5D00F16EEE33000AB2F41 /* GSS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC26543F16E6F34800132882 /* GSS.framework */; };
+		ACDDF12E16F994F700206C59 /* UnicodeBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDDF12C16F994F700206C59 /* UnicodeBrowser.m */; };
+		ACDDF12F16F994F700206C59 /* UnicodeBrowser.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACDDF12D16F994F700206C59 /* UnicodeBrowser.xib */; };
 		ACEBB21F16E65E920088E6D6 /* ClassDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = ACEBB21D16E65E920088E6D6 /* ClassDetail.m */; };
 		ACEBB22016E65E920088E6D6 /* ClassDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACEBB21E16E65E920088E6D6 /* ClassDetail.xib */; };
 		ACF26FEC16E64ECD00D7A025 /* ClassBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = ACF26FEA16E64ECD00D7A025 /* ClassBrowser.m */; };
@@ -325,6 +326,9 @@
 		AC5DD11616DB835E0030B9A8 /* AttributedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttributedString.h; sourceTree = "<group>"; };
 		AC5DD11716DB835E0030B9A8 /* AttributedString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttributedString.m; sourceTree = "<group>"; };
 		AC5DD11816DB835E0030B9A8 /* AttributedString.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AttributedString.xib; sourceTree = "<group>"; };
+		ACDDF12B16F994F700206C59 /* UnicodeBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnicodeBrowser.h; sourceTree = "<group>"; };
+		ACDDF12C16F994F700206C59 /* UnicodeBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnicodeBrowser.m; sourceTree = "<group>"; };
+		ACDDF12D16F994F700206C59 /* UnicodeBrowser.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UnicodeBrowser.xib; sourceTree = "<group>"; };
 		ACEBB21C16E65E920088E6D6 /* ClassDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassDetail.h; sourceTree = "<group>"; };
 		ACEBB21D16E65E920088E6D6 /* ClassDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassDetail.m; sourceTree = "<group>"; };
 		ACEBB21E16E65E920088E6D6 /* ClassDetail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClassDetail.xib; sourceTree = "<group>"; };
@@ -338,7 +342,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACC5D00F16EEE33000AB2F41 /* GSS.framework in Frameworks */,
 				AC26541B16E6F26C00132882 /* Accelerate.framework in Frameworks */,
 				AC26541D16E6F27000132882 /* Accounts.framework in Frameworks */,
 				AC26541F16E6F27300132882 /* AddressBook.framework in Frameworks */,
@@ -652,6 +655,9 @@
 				AC26541016E6E4BF00132882 /* RuntimeHelper.h */,
 				AC26541116E6E4BF00132882 /* RuntimeHelper.m */,
 				AC26541916E6F19500132882 /* Constants.h */,
+				ACDDF12B16F994F700206C59 /* UnicodeBrowser.h */,
+				ACDDF12C16F994F700206C59 /* UnicodeBrowser.m */,
+				ACDDF12D16F994F700206C59 /* UnicodeBrowser.xib */,
 			);
 			path = UltimateTool;
 			sourceTree = "<group>";
@@ -740,6 +746,7 @@
 				ACF26FED16E64ECD00D7A025 /* ClassBrowser.xib in Resources */,
 				ACEBB22016E65E920088E6D6 /* ClassDetail.xib in Resources */,
 				AC26541816E6ECCA00132882 /* ProtocolBrowser.xib in Resources */,
+				ACDDF12F16F994F700206C59 /* UnicodeBrowser.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -764,6 +771,7 @@
 				ACEBB21F16E65E920088E6D6 /* ClassDetail.m in Sources */,
 				AC26541216E6E4BF00132882 /* RuntimeHelper.m in Sources */,
 				AC26541716E6ECCA00132882 /* ProtocolBrowser.m in Sources */,
+				ACDDF12E16F994F700206C59 /* UnicodeBrowser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

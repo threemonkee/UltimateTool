@@ -16,7 +16,8 @@ typedef enum
     COLOR_GENERATOR,
     //ATTRIBUTED_STRING,
     CLASS_BROWSER,
-    PROTOCOL_BROWSER
+    PROTOCOL_BROWSER,
+    UNICODE_BROWSER
 }main_menu;
 
 @interface MainMenu ()
@@ -63,7 +64,7 @@ typedef enum
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 6;
+    return 7;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -99,7 +100,10 @@ typedef enum
             break;
         case PROTOCOL_BROWSER:
             stringMenu = @"Protocol Browser";
-        break;
+            break;
+        case UNICODE_BROWSER:
+            stringMenu = @"Unicode Browser";
+            break;
     }
     [cell.textLabel setText:stringMenu];
     
@@ -198,6 +202,12 @@ typedef enum
         ProtocolBrowser *protocolBrowser = [[ProtocolBrowser alloc] initWithNibName:@"ProtocolBrowser" bundle:nil];
         [protocolBrowser setTitle:@"Protocol Browser"];
         [self.navigationController pushViewController:protocolBrowser animated:TRUE];
+        
+    }else if (indexPath.row == UNICODE_BROWSER)
+    {
+        UnicodeBrowser *unicodeBrowser = [[UnicodeBrowser alloc] initWithNibName:@"UnicodeBrowser" bundle:nil];
+        [unicodeBrowser setTitle:@"Unicode Browser"];
+        [self.navigationController pushViewController:unicodeBrowser animated:TRUE];
     }
 }
 

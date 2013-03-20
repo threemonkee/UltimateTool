@@ -15,6 +15,8 @@
 #import "AttributedString.h"
 #import "ClassBrowser.h"
 #import "ProtocolBrowser.h"
+#import "UnicodeBrowser.h"
+
 
 @interface MainMenu : UITableViewController
 
